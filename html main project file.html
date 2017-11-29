@@ -1,0 +1,296 @@
+
+<!-- saved from url=(0041)https://sandidel.github.io/EE320_Project/ -->
+<html class="gr__sandidel_github_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css">
+			body{font-family: sans-serif;}
+			p{display: inline-block;}
+			img{display: block;}
+			.container{width: 90%;position absolute;margin: auto;}
+			.title{position: relative;width: 90%;margin: auto;text-align: center;font-weight: bold;font-size: 18px;padding: 1%;}
+			.section{position: relative;width: 90%;margin: auto;padding: 2%;}
+			.subsection{position: relative; width: 98%;text-align: justify;padding: 10px;}
+			.heading{position: relative; width: 98%;text-align: left;font-size: 14px;font-weight: bold;}
+			.text{width: 95%;font-size: 12px;text-align: justify;padding: 10px 0px 10px 0px;}
+			.authors{position: relative;width: 80%;margin: auto;padding: 2%;font-style: italic;text-align: center;font-size: 12px;}
+			.image{width: 95%;font-size: 12px;text-align: left;}
+			body {
+    background-color: lightblue;
+}
+		</style>
+	</head>
+	<body data-gr-c-s-loaded="true" style="">
+		<div class="container">
+			<div class="title">  <p><font size="6"><u>Speaker Recognition</u></font></p></div>
+
+			<div class="authors">
+
+				<!-- Start edit here  -->
+				<p><b></b></p><p><b><font size="4">Sanjeev Didel, Roll No.: 150108031, Branch: EEE</font></b></p><b>;<br>
+				<p><b></b></p><p><b><font size="4">Aman Kumar, Roll No.: 150108003, Branch: EEE</font></b></p><b>;<br> &nbsp; &nbsp;
+				<p><b></b></p><p><b><font size="4">Deepak Meghwal, Roll No.: 150108009, Branch: EEE</font></b></p><b>;<br> &nbsp; &nbsp;
+				<p><b></b></p><p><b><font size="4">Mahaveer Gahlot, Roll No.: 150108020, Branch: EEE</font></b></p><b>;<br> &nbsp; &nbsp;
+
+				
+				
+				<!-- Stop edit here -->
+
+			</b></b></b></b></div><b><b><b>
+
+
+			<div class="section">
+				<div class="heading"><font color="red">Abstract:-&gt;</font></div>
+				<div class="text">
+			 <font size="3">
+					<!-- Start edit here  -->
+					
+					Speaker Recognition systems have become very important these days because this technique makes it possible to use the speaker's voice to verify their identity and control access to many services.
+					We are using pitch and Power Spectral Density as features, which will be used in Pitch analysis, Formant analysis and Waveform comparison.
+					We have used Pitch and Power Spectral Density(PSD) as features. The motivation behind taking Pitch as feature was it is calculated by taking taking average pitches of all the segments.  The average pitch reduced the number of trained files to be compared than formant analysis.<br>
+					But formant analysis produced more accurate results, compare to pitch analysis, so PSD is taken as feature.
+					</font> 
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="heading"><font color="red">1. Introduction:-&gt;</font></div>
+				<div class="text">
+
+					<!-- Start edit here  -->
+					 <font size="3">
+					Our project deals with problem of identifying voice of a particular speaker from a given set of sample- voices and arrange them in descending order of resembalance with reference voice, given the speech is same for all the speakers.
+					 </font> 
+					<!-- Stop edit here -->
+
+				</div>
+
+				<div class="subsection">
+					<div class="heading"><font color="red">1.1 Introduction to Problem:-&gt;</font></div>
+					<div class="text">
+
+						<!-- Start edit here  -->
+						 <font size="3"> 
+						Arranging the all data sample voices in descending order of their matching with the reference voice.It aims to build an algorithm, that can with relative ease, can detect the speaker among the various other speaker. 
+						 </font> 
+						<!-- Stop edit here -->
+
+					</div>
+				</div>
+
+				<div class="subsection">
+					<div class="heading"><font color="red">1.2 Figure:-&gt;</font></div>
+					<div class="image">
+
+						<!-- Start edit here  -->
+						 <font size="3">
+						Block diagram of the system-&gt;
+					 </font>
+	<img src="./sandidel.github.io_files/block.png" alt="This text displays when the image is umavailable" width="1000px" height="300">
+						<!-- Stop edit here -->
+
+					</div>
+				</div>
+				<div class="subsection">
+					<div class="heading"><font color="red">1.3 Literature Review:-&gt;</font></div>
+					<div class="text">
+					 <font size="3">
+
+						<!-- Start edit here  -->
+						    <p>After referring to many voice recognition algorithms we finally decided to do first the pitch analysis of all the given voice samples then on the basis of comparison between the average pitch of the reference voice and all the other voices present in the sample taking few of them for next level analysis that is formant analysis.
+    <p>Although a lot number of metods for detecting pitch have been proposed but the autocorrelation pitch detector is still the most reliable and robust method of pitch detection.There are several reasons why autocorrelation method for pitch detection have met with great success .One of them is in autocorrelation method computation is made directly on the waveform.Although a high rate of processing is required and hence the process may be very time consuming than other methods.As autocorrelation method is fairly phase insensitive thus this method is very useful in decting the pitch of voices which have suffered some kind of phase distortion while being transmitted or recorded.Although an autocorrelation pitch detector has some advantages for pitch detection, there several problems associated  with it.One problem is to decide which of the several autocorrelation peaks correspond to pitch period.
+   <p>A wide variety of solutions have been proposed for the problems associated with autocorrelation method.Most methods use a sharp cut off low pass filter of about cut off frequency of 900 Hz.Generally Buttrworth filter.This will in general preserve sufficient number of hormonics for accurate pitch detection.
+   <p>Now focussing our attention to formant analysis used here as the second level identification.It has been known for many years that formant frequencies are important in determining phonetic content of speech sounds.Several investigations has been done on formant frequencies on the prospect of them being used as a voice recognition tool using various methods for basic analysis such as linear prediction,analysis by synthesis with fourier spectra and peak picking on spectrally smoothed spectra.Here we have used peak picking on spectrally smothed spectra.
+   <p>However using analysis of formant frequencies for voice recognition can cause problems some times for example examining voices which are not very much different on the basis of formant frequencies can not be differentiated on the basis of formant analysis. To be useful for  automatic recognition of speech formant frequencies must be supplemented as general spectral shape information.Whenever the spectrum has peaky nature the phonetic details are better described by formant frequencies than by the more usual high order specrum features.Which have no relationship with the formant frequencies. Sometimes a formant  may be so weak as a consequence of weak excitation that it may not  cause any peak in the spectrum.All these situations can cause all higher frequency formants to be labelled wrongly.
+   <p>Futher study refer to below links:-<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1162905"> 1.Autocorrelation Analysis for Pitch Detection</a></p> 
+   <a href="https://pdfs.semanticscholar.org/54c1/ddd031b0b3b93d3c257c30bee54dd2168267.pdf">2. Formant Analysis</a></p> 
+  						
+						
+						<!-- Stop edit here -->
+
+					</div>
+				</div>
+				<div class="subsection">
+					<div class="heading"><font color="red">1.4 Proposed Approach:-&gt;</font></div>
+					<div class="text">
+
+						<!-- Start edit here  -->
+						 <font size="3">
+						We used Waveform Comparison which includes Pitch analysis and formant analysis. Waveform comparison determined based on the comparison between pitch and formant analysis. Reference file is compared with all others based on average pitch. Top 12 matches then compared by the differences on their formant peak vectors.
+						 </font> 
+						
+						<!-- Stop edit here -->
+
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+		
+				
+				<div class="subsection">
+					<div class="heading"><font color="red">1.5 Report Organization:-&gt;</font></div>
+					<div class="text">
+					 <font size="3">
+						<!-- Start edit here  -->
+						We have divided our project into 3 different sections :
+                    <br>(1)Pitch Analysis  
+                    <br>(2)Formant Analysis 
+                    <br>(3) Waveform Comparison <br>
+						 
+                        <br>(1)<font color="blue">Pitch Analysis :-&gt;</font> <br>The algorithm used in it as follows, it takes the average pitches of all the voices present in the given sample and compares with the average pitch of the reference voice which is to be recognized<br>
+						          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The algorithm used in it as follows, it takes the average pitches of all the voices present in the given sample and compares with the average pitch of the reference voice which is to be recognized. we used audioread to read the reference file and get the sampling rate and the number of samples.Then choose segments every 30ms of the signal and calculate the total no. of segments(nFrames) and F0=zeros(1:nFrames), then choose segment(i), apply butterworth filters on that segments and then autocorrelation method, after that calculate pitch F0(i), we did the same thing for all segments and take average of all pitches to get average pitch.<br>
+                                  
+											 
+						    <br>a)Butterworth filter :-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Butterworth filter is a type of signal processing filter designed to have as flat a frequency response as possible in the passband. It is also referred to as a maximally flat magnitude filter.As the Butterworth filter is maximally flat, this means that it is designed so that at zero frequency, the first 2n-1 derivatives for the power function with respect to frequency are zero.
+                            <br>Thus it is possible to derive the formula for the Butterworth filter frequency response:  <br>
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |Vout|/|Vin|^2 = 1/(1+(f/fc)^2n)  
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where,   f = frequency at which calculation is made,
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fo = the cut-off frequency( half power or -3dB frequency) ,
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vin = input voltage,
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vout = output voltage,
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n = number of elements in the filter
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The equation can be re-written to give its more usual format. Here H(jω) is the transfer function and it is assumed the filter has no gain, i.e. it is not an active filter.
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H(jw) = 1/(1+(w/wc)^2n)^1/2 <br>     
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where:   H(jω) = transfer function at angular frequency ω
+                                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ω = angular frequency and is equal to 2πf    
+									 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ωo = cutoff frequency expressed as an angular value and is equal to 2πfo
+						    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When wanting to express the loss of the Butterworth filter at any point, the Butterworth formula below can be used. This gives the attenuation in decibels at any point.
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adb = 10log(1+(w/wc)^2n)<br>
+							
+							<br>(b)Auto-correlation :-  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Autocorrelation" is used to compare a signal with a time-delayed version of itself. If a signal is periodic, then the signal will be perfectly correlated with a version of itself if the time-delay is an integer number of periods. That fact, along with related experiments, has implicated autocorrelation as a potentially important part of signal processing in human hearing.
+							                        <br>Mathematically, for a continuous signal, s(t), the autocorrelation, R(τ) is calculated using: 
+													<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R(τ) = 1/(tmax - tmin)∫s(t)s(t-τ)dt<br>
+				
+                <div class="subsection">
+					<div class="heading">1.2 Figure</div>
+					<div class="image">
+
+						<!-- Start edit here  -->
+						
+						<img src="./sandidel.github.io_files/pitch.png" alt="This text displays when the image is umavailable" width="1000px" height="700">
+						<!-- Stop edit here -->
+
+					</div>
+				</div>							
+													
+ <!-- Stop edit here -->
+
+					 
+							
+							(2)<font color="blue">Formant Analysis-&gt;</font><br><p>Formant is defined as the spectral peaks of the sound spectrum and in formant analysis PSD(power spectral density) of each voice of the sample and reference voice is calculated, considering only 3-4 peaks, their positions and peak differences is calculated, if these quantities matched with the reference signal, then the reference signal is identified in the sample.We read the reference file, get sampling rate and sampled data.Then applied Yule Walker method for PSD(Power Spectral Density) P, then convert P to db and calculate normalized frequency axis, calculate difference between consequece.
+                                   </p><p>Yule-Walker Method:-The Yule-Walker Method block estimates the power spectral density (PSD) of the input using the Yule-Walker AR method. This method, also called the autocorrelation method, fits an autoregressive (AR) model to the windowed input data. It does so by minimizing the forward prediction error in the least squares sense. This formulation leads to the Yule-Walker equations, which the Levinson-Durbin recursion solves. Block outputs are always nonsingular.	
+                                    </p><p>The input must be a column vector. This input represents a frame of consecutive time samples from a single-channel signal. The block outputs a column vector containing the estimate of the power spectral density of the signal at Nfft equally spaced frequency points. The frequency points are in the range [0,Fs), where Fs is the sampling frequency of the signal.When you select Inherit estimation order from input dimensions, the order of the all-pole model is one less that the input frame size. Otherwise, the Estimation order parameter value specifies the order. To guarantee a valid output, the Estimation order parameter must be less than or equal to half the input vector length. The block computes the spectrum from the FFT of the estimated AR model parameters. 
+                                    </p><p>Selecting the Inherit FFT length from estimation order parameter specifies that Nfft is one greater than the estimation order. Clearing the Inherit FFT length from estimation order check box allows you to use the FFT length parameter to specify Nfft as a power of 2. The block zero-pads or wraps the input to Nfft before computing the FFT.When you select the Inherit sample time from input check box, the block computes the frequency data from the sample period of the input signal. For the block to produce valid output, the following conditions must hold:
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)The input to the block is the original signal, with no samples added or deleted (by insertion of zeros, for example).
+									<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)The sample period of the time-domain signal in the simulation equals the sample period of the original time series.
+
+									
+				</p><div class="subsection">
+					<div class="heading">1.2 Figure</div>
+					<div class="image">
+
+						<!-- Start edit here  -->
+						
+						<img src="./sandidel.github.io_files/Formant.png" alt="This text displays when the image is umavailable" width="1000px" height="700">
+						<!-- Stop edit here -->
+
+					</div>
+				</div>								
+													
+ <!-- Stop edit here -->
+
+					</font></div><font size="3">
+				</font></div><font size="3">
+			</font></div><font size="3">
+
+			
+			
+			
+			
+			
+			
+
+			<div class="section">
+				<div class="heading"><font color="red">2. Proposed Approach:-&gt;</font></div>
+				<div class="text">
+				 <font size="3">
+					<!-- Start edit here  -->
+					We have studied three techniques:<br>
+					 <font color="bold"> (1)Pitch Analysis <br>
+					(2)Formant Analysis <br>
+					(3) Waveform Comparison<br></font> 
+					
+					(1)<font color="blue">Pitch Analysis-&gt;</font> The algorithm used in it as follows, it takes the average pitches of all the voices present in the given sample and compares with the average pitch of the reference voice which is to be recognized.
+					we used audioread to read the reference file and get the sampling rate and the number of samples.Then choose segments every 30ms of the signal and calculate the total no. of segments(nFrames) and F0=zeros(1:nFrames), then choose segment(i), apply butterworth filters on that segments and then autocorrelation method, after that calculate pitch F0(i), we did the same thing for all segments and take average of all pitches to get average pitch.
+					<br>
+					(2)<font color="blue">Formant Analysis-&gt;</font>Formant is defined as the spectral peaks of the sound spectrum and in formant analysis PSD(power spectral density) of each voice of the sample and reference voice is calculated, considering only 3-4 peaks, their positions and peak differences is calculated, if these quantities matched with the reference signal, then the reference signal is identified in the sample.We read the reference file, get sampling rate and sampled data.Then applied Yule Walker method for PSD(Power Spectral Density) P, then convert P to db and calculate normalized frequency axis, calculate difference between consequtive spectrum Xd= diff(P), then we pick the index(I), when difference goes from + to -(at this index there will be maxima), and by these differences with reference file the speaker is identified in the sample data. 
+					 <br>Now we use  <font color="red">Waveform comparison</font>  which involves above both technique. Waveform comparison determined based on the comparison between pitch and formant analysis. Reference file is compared with all others based on average pitch. Top 12 matches then compared by the differences on their formant peak vectors.
+
+					<!-- Stop edit here -->
+		
+		 </font> 
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="heading"><font color="red">3. Experiments &amp; Results:-&gt;</font></div>
+				<div class="subsection">
+					<div class="heading"><font color="red">3.1 Dataset Description:-&gt;</font></div>
+					<div class="text">
+						 <font size="3">
+						<!-- Start edit here  -->
+						We recorded around 90 voices of all students of our class and used it as data set, refrence voice is taken any of these files. We recorded two different text data sets each of 45 persons. TH link of both data is given below:
+						<p><a href="https://drive.google.com/file/d/1LdLqsHGh6QbbDTuBs7dGOpdWSlS3J80k/view">Visit our First Data-set</a></p>
+						
+						<br>
+			   <p><a href="https://drive.google.com/file/d/1RxqX7Rg7ze_0aiWOb9JVdKh_byWbz9ay/view">Visit our Second Data-set</a></p> 
+				 </font></div><font size="3">
+				</font></div><font size="3">
+				<div class="subsection">
+					<div class="heading"><font color="red">3.2 Discussion:-&gt;</font></div>
+					<div class="text">
+
+						<!-- Start edit here  -->
+						 <font size="3">
+						As a result we get the file arranged in descending order of their matching with given file.If we do text dependent speaker identification, then this thing can be done by only pitch analysis, since if we get the same pitch of any sample file with reference file, then we identified the speaker, else reference file is not present in data-set.Somet time results where not consistance bacause of the reason discuss in literature review .
+						
+						<!-- Stop edit here -->
+						</font>
+					</div>
+				</div>
+			</font></div><font size="3">
+
+			<div class="section">
+				<div class="heading"><font color="red">4. Conclusions:-&gt;</font></div>
+				<div class="subsection">
+					<div class="heading"><font color="red">4.1 Summary:-&gt;</font></div>
+					<div class="text">
+                         <font size="3">
+						<!-- Start edit here  -->
+						While starting this project of voice recognition we went thorugh some voice recognition algorithms and we found the algorithm of pitch analysis using autocorrelation of sample voices a useful tool do the job and hence we used it as a first level of processing of the sample voices we where do conduct the our project. Now we have some of the voices which had avarage pitch closest to the reference voice , then on these selected voices we perform the comparison of peaks of their spectrum of formant frequency components based on both these test . We arranged the given sample voices on the basis of their resembalance with the reference voice .    
+						
+						<!-- Stop edit here -->
+
+					</div>
+				</div>
+				<div class="subsection">
+					<div class="heading"><font color="red">4.2 Future Extensions:-&gt;</font></div>
+					<div class="text">
+					 <font size="3">
+						<!-- Start edit here  -->
+					(1) Speaker Recognition can be used for Security purposes, Control access.<br>
+					(2) By recognizing particular person's voice,we can also find the involvement of this person in meeting or in debate. Like in a Meeting, we can record all the voice data that the head person said.<br>
+					(3) In Singer Replacement or actor voice replacement can be done by our technique, as we are rearranging the all data voices in descending order of their matching with the referenc voice.<br>
+					(4) So after removing noise from song, singer identification, Commercial Detection from Sound Tracks can be done easily.	
+						<!-- Stop edit here -->
+				 </font> 
+					</div>
+				</div>
+			</div>
+
+		</font></font></b></b></b></div><b><b><b><font size="3"><font size="3">
+	
+
+</font></font></b></b></b></body></html>
